@@ -1,0 +1,56 @@
+/* This file is for your main application css. */
+
+@import "~bootstrap/scss/bootstrap";
+
+.card {
+    border:none;
+    border-radius:0;
+}
+
+.card-header {
+    border-radius: 0;
+    border:1px solid lightgray;
+    margin-bottom:10px;
+}
+
+.card-green .card-header {
+    border-radius: 0;
+    background-color:#84DAA1;
+    border: 1px solid #59BF7C;
+}
+
+.card-green .card-body {
+    border-radius: 0;
+    background-color:#DBFAE5;
+    border: 1px solid #59BF7C;
+}
+
+.card-blue .card-header {
+    border-radius: 0;
+    color:white;
+    background-color: #007bff;
+    border: 1px solid #0E00BF;
+}
+
+.card-blue .card-body {
+    border-radius: 0;
+    background-color:#77B3F1;
+    border: 1px solid #0E00BF;
+}
+
+.card-yellow .card-header {
+    border-radius: 0;
+    background-color: #FFD452;
+    border: 1px solid #B28500;
+}
+
+.card-yellow .card-body {
+    border-radius: 0;
+    background-color:#FFEBAE;
+    border: 1px solid #B28500;
+}
+
+.btn {
+    border:1px solid white;
+    border-radius:0;
+}

@@ -1,0 +1,7 @@
+<span><%= link "Back", to: Routes.user_path(@conn, :index), class: "btn btn-primary" %></span>
+<div class="card card-yellow mt-2">
+  <h3 class="card-header">Edit User</h3>
+  <div class="card-body">
+    <%= render "form.html", Map.put(assigns, :action, Routes.user_path(@conn, :update, @user)) %>
+  </div>
+</div>

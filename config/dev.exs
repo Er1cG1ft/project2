@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :project1, Project1Web.Endpoint,
-  http: [port: 4000],
+  http: [port: 8080],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -68,8 +68,8 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :project1, Project1.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "project1",
+  password: "project1",
   database: "project1_dev",
   hostname: "localhost",
   pool_size: 10
