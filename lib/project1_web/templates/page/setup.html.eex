@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-12">
+        <h1>Headache Configuration</h1>
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card card-default" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">GroupMe</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Group Messaging</h6>
+            <%= if @token.groupme_token != nil do %>
+                <%= link "Disable", to: Routes.user_token_path(@conn, :reset_groupme, @token), class: "card-link" %>
+            <% else %>
+                <a href="https://oauth.groupme.com/oauth/authorize?client_id=mCzJvnJs4KburSZbjGpZK6dTFsfVdvPMHnCUpAUkNV29LpoF" class="card-link">Enable</a>
+            <% end %>
+          </div>
+        </div>
+    </div>
+</div>

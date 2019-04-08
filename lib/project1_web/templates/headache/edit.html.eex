@@ -1,0 +1,5 @@
+<h1>Edit Headache</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.headache_path(@conn, :update, @headache)) %>
+
+<span><%= link "Back", to: Routes.headache_path(@conn, :index) %></span>

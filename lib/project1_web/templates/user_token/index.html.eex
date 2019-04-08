@@ -1,0 +1,26 @@
+<h1>Listing User tokens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Groupme token</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for user_token <- @user_tokens do %>
+    <tr>
+      <td><%= user_token.groupme_token %></td>
+
+      <td>
+        <%= link "Show", to: Routes.user_token_path(@conn, :show, user_token) %>
+        <%= link "Edit", to: Routes.user_token_path(@conn, :edit, user_token) %>
+        <%= link "Delete", to: Routes.user_token_path(@conn, :delete, user_token), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New User token", to: Routes.user_token_path(@conn, :new) %></span>

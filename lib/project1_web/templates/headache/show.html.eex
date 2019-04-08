@@ -1,0 +1,8 @@
+<h1>Show Headache</h1>
+
+<ul>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.headache_path(@conn, :edit, @headache) %></span>
+<span><%= link "Back", to: Routes.headache_path(@conn, :index) %></span>

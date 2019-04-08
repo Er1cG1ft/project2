@@ -23,7 +23,7 @@ defmodule Project1.MixProject do
       extra_applications: [:logger, :runtime_tools]
     ]
   end
-
+  
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
@@ -41,10 +41,13 @@ defmodule Project1.MixProject do
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.11"},
-      {:jason, "~> 1.0"},
+      {:jason, "~> 1.1"},
       {:plug_cowboy, "~> 2.0"},
       {:comeonin, "~> 4.1"},
-      {:argon2_elixir, "~> 1.3"}
+      {:argon2_elixir, "~> 1.3"},
+      {:httpoison, "~> 1.5.0"},
+      {:mailgun, "~> 0.1.2"},
+      {:timex, "~> 3.0"}
     ]
   end
 

@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-12">
+        <h3>Headache Statistics</h3>
+        <hr>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-lg-4">
+        <div class="card card-default text-center" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title"><%= @today %></h3>
+            <p class="card-text">Headaches caused today</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card card-default text-center" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title"><%= @week %></h3>
+            <p class="card-text">Headaches caused this week</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card card-default text-center" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title"><%= @ever %></h3>
+            <p class="card-text">All Headaches caused</p>
+          </div>
+        </div>
+    </div>
+</div>

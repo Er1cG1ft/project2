@@ -20,6 +20,8 @@
             <%= if @current_user && @current_user.admin do %>
               <a class="nav-item nav-link" href="/users">Users</a>
             <% end %>
+            <a class="nav-item nav-link" href="/setup">Setup</a>
+            <a class="nav-item nav-link" href="/stats">Statistics</a>
           </div>
         </div>
         <%= if @current_user do %>

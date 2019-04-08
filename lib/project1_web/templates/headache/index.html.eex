@@ -1,0 +1,24 @@
+<h1>Listing Headaches</h1>
+
+<table>
+  <thead>
+    <tr>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for headache <- @headaches do %>
+    <tr>
+
+      <td>
+        <%= link "Show", to: Routes.headache_path(@conn, :show, headache) %>
+        <%= link "Edit", to: Routes.headache_path(@conn, :edit, headache) %>
+        <%= link "Delete", to: Routes.headache_path(@conn, :delete, headache), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Headache", to: Routes.headache_path(@conn, :new) %></span>

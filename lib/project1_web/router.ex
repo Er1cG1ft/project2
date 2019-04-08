@@ -18,8 +18,19 @@ defmodule Project1Web.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/setup", PageController, :setup
+    get "/stats", PageController, :stats
+    get "/groupme", PageController, :groupme
     resources "/users", UserController
     resources "/sessions", SessionController, only: [:create, :delete], singleton: true
+    scope "/headaches" do
+      get "/:id/resend", HeadacheController, :resend
+    end
+    scope "/user_tokens" do
+      get "/:id/reset_groupme", UserTokenController, :reset_groupme
+    end
+    resources "/headaches", HeadacheController
+    resources "/user_tokens", UserTokenController
   end
 
   # Other scopes may use custom stacks.

@@ -12,6 +12,8 @@ defmodule Project1.Users.User do
     field :password_hash, :string
     field :pw_tries, :integer
     field :pw_last_try, :utc_datetime
+    has_many :headaches, Project1.Headaches.Headache
+    has_one :tokens, Project1.UserTokens.UserToken
     timestamps()
   end
 

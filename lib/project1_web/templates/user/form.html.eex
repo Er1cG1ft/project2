@@ -22,6 +22,8 @@
     <%= label f, :admin %>
     <%= checkbox f, :admin %>
     <%= error_tag f, :admin %>
+  <% else %>
+  <%= hidden_input f, :admin, value: false %>
   <% end %>
   
    <div class="form-group">

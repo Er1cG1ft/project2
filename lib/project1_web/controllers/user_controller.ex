@@ -3,6 +3,8 @@ defmodule Project1Web.UserController do
 
   alias Project1.Users
   alias Project1.Users.User
+  alias Project1.UserTokens.UserToken
+  alias Project1.Repo
   
   plug :authenticate_user when action not in [:new, :create]
 
@@ -19,6 +21,7 @@ defmodule Project1Web.UserController do
   def create(conn, %{"user" => user_params}) do
     case Users.create_user(user_params) do
       {:ok, user} ->
+        Repo.insert!(%UserToken{user_id: user.id})
         if conn.assigns.current_user != nil do
           conn
           |> put_flash(:info, "User created successfully.")

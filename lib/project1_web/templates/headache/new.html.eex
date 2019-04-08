@@ -1,0 +1,8 @@
+<span><%= link "Back", to: Routes.page_path(@conn, :index), class: "btn btn-primary" %></span>
+<div class="card card-green mt-2">
+  <h3 class="card-header">New Headache</h3>
+  <div class="card-body">
+    <%= render "form.html", Map.put(assigns, :action, Routes.headache_path(@conn, :create)) %>
+  </div>
+</div>
+
