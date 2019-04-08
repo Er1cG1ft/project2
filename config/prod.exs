@@ -11,7 +11,7 @@ use Mix.Config
 # before starting your production server.
 config :project1, Project1Web.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 4000],
-  url: [host: "example.com", port: 80],
+  url: [host: "headache.ericgift.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
